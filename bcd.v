@@ -10,7 +10,7 @@ module bcd(registrador, a1, b1, c1, d1, e1, f1, g1, a2, b2, c2, d2, e2, f2, g2, 
 	reg [6:0] SeteSegmentos4;
 	
 	always @(*) begin
-		case({registrador[0], registrador[1], registrador[2], registrador[3]}) 
+		case({registrador[3], registrador[2], registrador[1], registrador[0]}) 
 			4'b0000: SeteSegmentos = 7'b1111110;
 			4'b0001: SeteSegmentos = 7'b0110000;
 			4'b0010: SeteSegmentos = 7'b1101101;
@@ -23,7 +23,7 @@ module bcd(registrador, a1, b1, c1, d1, e1, f1, g1, a2, b2, c2, d2, e2, f2, g2, 
 			4'b1001: SeteSegmentos = 7'b1110011;
 			default: SeteSegmentos = 7'b0000000;
 		endcase
-		case({registrador[4], registrador[5], registrador[6], registrador[7]}) 
+		case({registrador[7], registrador[6], registrador[5], registrador[4]}) 
 			4'b0000: SeteSegmentos2 = 7'b1111110;
 			4'b0001: SeteSegmentos2 = 7'b0110000;
 			4'b0010: SeteSegmentos2 = 7'b1101101;
@@ -36,7 +36,7 @@ module bcd(registrador, a1, b1, c1, d1, e1, f1, g1, a2, b2, c2, d2, e2, f2, g2, 
 			4'b1001: SeteSegmentos2 = 7'b1110011;
 			default: SeteSegmentos2 = 7'b0000000;
 		endcase
-		case({registrador[8], registrador[9], registrador[10], registrador[11]}) 
+		case({registrador[11], registrador[10], registrador[9], registrador[8]}) 
 			4'b0000: SeteSegmentos3 = 7'b1111110;
 			4'b0001: SeteSegmentos3 = 7'b0110000;
 			4'b0010: SeteSegmentos3 = 7'b1101101;
@@ -49,7 +49,7 @@ module bcd(registrador, a1, b1, c1, d1, e1, f1, g1, a2, b2, c2, d2, e2, f2, g2, 
 			4'b1001: SeteSegmentos3 = 7'b1110011;
 			default: SeteSegmentos3 = 7'b0000000;
 		endcase
-		case({registrador[12], registrador[13], registrador[14], registrador[15]}) 
+		case({registrador[15], registrador[14], registrador[13], registrador[12]}) 
 			4'b0000: SeteSegmentos4 = 7'b1111110;
 			4'b0001: SeteSegmentos4 = 7'b0110000;
 			4'b0010: SeteSegmentos4 = 7'b1101101;
