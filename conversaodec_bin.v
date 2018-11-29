@@ -14,7 +14,6 @@ module conversaodec_bin(registradorin, registradorout);
 	reg [15:0] b;
 	reg [15:0] b2;
 	reg [15:0] b3;
-	//reg [15:0] b4;
 	always @(*) begin
 		aux <= registradorin;
 		b <= aux;
