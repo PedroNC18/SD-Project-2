@@ -12,16 +12,7 @@ module conversaobin_dec(registradorin, registradorout);
 		del2 <= registradorin[7:4];
 		del3 <= registradorin[11:8];
 		del4 <= registradorin[15:12];
-		//del <= (del * 10);
-		//del2 <= (del * 100);
-		/*
-		registradorout <= registradorout + del;
-		registradorout <= registradorout + (del2 * 10);
-		registradorout <= registradorout + (del3 * 100);
-		registradorout <= registradorout + (del4 * 1000);
-		*/
 		registradorout <= del + (del2*10) + (del3*100) + (del4*1000);
-		//registradorout <= 16'b1000000100000000;
 	end
 	
 endmodule
